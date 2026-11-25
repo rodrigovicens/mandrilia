@@ -134,7 +134,8 @@ footer img{height:18px;width:auto;opacity:.7}
 @media(max-width:900px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}.disco{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.single p{display:none}}
 @media(max-width:720px){.bio,.vid,.contact{grid-template-columns:minmax(0,1fr)}nav .links{display:none}}
 @media(max-width:720px){.vids{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:600px){.disco{grid-template-columns:minmax(0,1fr)}.single p{display:block}.shows li{grid-template-columns:minmax(0,1fr) auto}.shows .pl{grid-column:1/-1;order:3}.hero{min-height:78svh}}
+@media(max-width:900px){.hero{display:block;min-height:0}.hero>img{position:relative;inset:auto;height:auto;aspect-ratio:3/2;object-position:50% 50%}.hero::after{top:auto;bottom:auto;height:0;display:none}.hero .in{padding-top:24px;background:var(--bg)}.hero .logo{width:min(420px,80vw)}}
+@media(max-width:600px){.disco{grid-template-columns:minmax(0,1fr)}.single p{display:block}.shows li{grid-template-columns:minmax(0,1fr) auto}.shows .pl{grid-column:1/-1;order:3}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
