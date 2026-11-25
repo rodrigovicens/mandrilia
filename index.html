@@ -74,7 +74,7 @@ nav .links a:hover{color:var(--ink)}
 .single p{margin:6px 0 0;color:#cfcac2;font-size:15px}
 .more{margin-top:40px;border-top:1px solid var(--line)}
 .more li{border-bottom:1px solid var(--line)}
-.more li a{display:grid;grid-template-columns:minmax(0,1fr) auto 40px;gap:16px;padding:16px 0;align-items:center;text-decoration:none}
+.more .row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:16px 0;align-items:center}
 .more li a:hover .t{color:var(--red)}
 .more li a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .more .pl{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center}
@@ -120,7 +120,7 @@ footer img{height:18px;width:auto;opacity:.7}
 .arrows button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .credit{color:var(--mute);font-size:14px;margin:12px 0 0}
 @media(min-width:901px){.hero{min-height:0;width:100%;height:min(66.6vw,960px)}.hero>img{object-position:50% 40%}}
-.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px}
 .vc{text-decoration:none;display:block}
 .vc .th{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#000;margin-bottom:14px}
 .vc .th img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s}
@@ -135,7 +135,8 @@ footer img{height:18px;width:auto;opacity:.7}
 .modal .x{position:absolute;top:12px;right:12px;width:48px;height:48px;background:var(--red);color:#fff;border:0;font-size:26px;cursor:pointer}
 @media(max-width:900px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}.disco{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.single p{display:none}}
 @media(max-width:720px){.bio,.vid,.contact{grid-template-columns:minmax(0,1fr)}nav .links{display:none}}
-@media(max-width:720px){.vids{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.vids{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.vc h3{font-size:20px}.vc .play i{width:48px;height:48px}}
+@media(max-width:420px){.vids{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:900px){.hero{display:block;min-height:0}.hero>img{position:relative;inset:auto;height:auto;aspect-ratio:3/2;object-position:50% 50%}.hero::after{top:auto;bottom:auto;height:0;display:none}.hero .in{padding-top:24px;background:var(--bg)}.hero .logo{width:min(420px,80vw)}}
 @media(max-width:600px){.disco{grid-template-columns:minmax(0,1fr)}.single p{display:block}.shows li{grid-template-columns:minmax(0,1fr) auto}.shows .pl{grid-column:1/-1;order:3}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -205,26 +206,26 @@ footer img{height:18px;width:auto;opacity:.7}
     <h2>Música</h2>
     <div class="disco">
       <article class="single">
-        <a href="https://www.youtube.com/watch?v=N1M1hfX1WI8" data-yt="N1M1hfX1WI8"><img src="img/nino.jpg" alt="Portada de Niño de Cristal" >
+        <a href="https://open.spotify.com/artist/7wUk7wg17Jo7ggHyW7ZzNn"><img src="img/nino.jpg" alt="Portada de Niño de Cristal" >
         <div class="meta"><h3>Niño de Cristal</h3><span class="yr">Último single</span></div></a>
         <p>Un himno contra la adicción digital. Séptimo sencillo de la banda.</p>
       </article>
       <article class="single">
-        <a href="https://www.youtube.com/watch?v=qYrPb9cEb44" data-yt="qYrPb9cEb44"><img src="img/golpea.jpg" alt="Portada de Golpea Tres Veces" >
+        <a href="https://open.spotify.com/artist/7wUk7wg17Jo7ggHyW7ZzNn"><img src="img/golpea.jpg" alt="Portada de Golpea Tres Veces" >
         <div class="meta"><h3>Golpea Tres Veces</h3><span class="yr">Single</span></div></a>
       </article>
       <article class="single">
-        <a href="https://www.youtube.com/watch?v=OSofZ6OdbQI" data-yt="OSofZ6OdbQI"><img src="img/separar.jpg" alt="Portada de Separar el Alma" >
+        <a href="https://open.spotify.com/artist/7wUk7wg17Jo7ggHyW7ZzNn"><img src="img/separar.jpg" alt="Portada de Separar el Alma" >
         <div class="meta"><h3>Separar el Alma</h3><span class="yr">2024</span></div></a>
         <p>Publicado el 30 de octubre de 2024.</p>
       </article>
     </div>
     <div class="more">
       <ul>
-        <li><a href="https://www.youtube.com/watch?v=apxnO0uIsik" data-yt="apxnO0uIsik"><span class="t">Genio Entre Ignorantes<span class="d">También en versión radio edit</span></span><span class="yr">2024</span><span class="pl" aria-hidden="true"></span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=ZRuPNJl7T0U" data-yt="ZRuPNJl7T0U"><span class="t">País en Venta</span><span class="yr">2024</span><span class="pl" aria-hidden="true"></span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=6IVAK5qKVEw" data-yt="6IVAK5qKVEw"><span class="t">Tierra de Primates<span class="d">Adelanto del disco debut del mismo nombre</span></span><span class="yr">2023</span><span class="pl" aria-hidden="true"></span></a></li>
-        <li><a href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="t">Hombre Hostil<span class="d">Single debut, sobre la primera línea del estallido social</span></span><span class="yr">2023</span><span class="pl" aria-hidden="true"></span></a></li>
+        <li><div class="row"><span class="t">Genio Entre Ignorantes<span class="d">También en versión radio edit</span></span><span class="yr">2024</span></div></li>
+        <li><div class="row"><span class="t">País en Venta</span><span class="yr">2024</span></div></li>
+        <li><div class="row"><span class="t">Tierra de Primates<span class="d">Adelanto del disco debut del mismo nombre</span></span><span class="yr">2023</span></div></li>
+        <li><div class="row"><span class="t">Hombre Hostil<span class="d">Single debut, sobre la primera línea del estallido social</span></span><span class="yr">2023</span></div></li>
       </ul>
     </div>
     <div class="spot"><iframe title="Mandrilia en Spotify" src="https://open.spotify.com/embed/artist/7wUk7wg17Jo7ggHyW7ZzNn?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
@@ -240,9 +241,15 @@ footer img{height:18px;width:auto;opacity:.7}
   <div class="wrap">
     <div class="galhead"><h2>Video</h2><a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial" style="margin-bottom:24px">Canal de YouTube</a></div>
     <div class="vids">
-      <a class="vc" href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="th"><img src="https://i.ytimg.com/vi/QRubkb1H3Ow/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/QRubkb1H3Ow/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/QRubkb1H3Ow/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Hombre Hostil</h3><span class="sub">Videoclip oficial · 2023</span></a>
-      <a class="vc" href="https://www.youtube.com/watch?v=9t-gXfF915o" data-yt="9t-gXfF915o"><span class="th"><img src="https://i.ytimg.com/vi/9t-gXfF915o/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/9t-gXfF915o/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/9t-gXfF915o/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Videoclip oficial · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=N1M1hfX1WI8" data-yt="N1M1hfX1WI8"><span class="th"><img src="https://i.ytimg.com/vi/N1M1hfX1WI8/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/N1M1hfX1WI8/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/N1M1hfX1WI8/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Niño de Cristal</h3><span class="sub">Último single</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=qYrPb9cEb44" data-yt="qYrPb9cEb44"><span class="th"><img src="https://i.ytimg.com/vi/qYrPb9cEb44/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/qYrPb9cEb44/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/qYrPb9cEb44/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Golpea Tres Veces</h3><span class="sub">Single</span></a>
       <a class="vc" href="https://www.youtube.com/watch?v=vCwl-le_jKs" data-yt="vCwl-le_jKs"><span class="th"><img src="https://i.ytimg.com/vi/vCwl-le_jKs/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/vCwl-le_jKs/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/vCwl-le_jKs/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Golpea Tres Veces</h3><span class="sub">Making of</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=9t-gXfF915o" data-yt="9t-gXfF915o"><span class="th"><img src="https://i.ytimg.com/vi/9t-gXfF915o/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/9t-gXfF915o/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/9t-gXfF915o/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Videoclip oficial · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=OSofZ6OdbQI" data-yt="OSofZ6OdbQI"><span class="th"><img src="https://i.ytimg.com/vi/OSofZ6OdbQI/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/OSofZ6OdbQI/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/OSofZ6OdbQI/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Single · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=apxnO0uIsik" data-yt="apxnO0uIsik"><span class="th"><img src="https://i.ytimg.com/vi/apxnO0uIsik/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/apxnO0uIsik/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/apxnO0uIsik/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Genio Entre Ignorantes</h3><span class="sub">Single · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=ZRuPNJl7T0U" data-yt="ZRuPNJl7T0U"><span class="th"><img src="https://i.ytimg.com/vi/ZRuPNJl7T0U/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/ZRuPNJl7T0U/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/ZRuPNJl7T0U/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>País en Venta</h3><span class="sub">Single · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=6IVAK5qKVEw" data-yt="6IVAK5qKVEw"><span class="th"><img src="https://i.ytimg.com/vi/6IVAK5qKVEw/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/6IVAK5qKVEw/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/6IVAK5qKVEw/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Tierra de Primates</h3><span class="sub">Single · 2023</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="th"><img src="https://i.ytimg.com/vi/QRubkb1H3Ow/maxresdefault.jpg" alt="" loading="lazy" onload="if(this.naturalWidth<200&&!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/QRubkb1H3Ow/hqdefault.jpg'}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://i.ytimg.com/vi/QRubkb1H3Ow/hqdefault.jpg'}"><span class="play"><i></i></span></span><h3>Hombre Hostil</h3><span class="sub">Videoclip oficial · 2023</span></a>
     </div>
   </div>
 </section>
