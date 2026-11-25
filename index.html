@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mandrilia · Metal desde Santiago de Chile</title>
+<meta name="description" content="Mandrilia: heavy, thrash y rock progresivo desde Santiago de Chile. Singles, videos, fotos, shows y contacto.">
+<meta property="og:title" content="Mandrilia">
+<meta property="og:description" content="Heavy, thrash y rock progresivo desde Santiago de Chile.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: a heavy band's official site, loud but disciplined
+   IDEA the gatefold of a metal record: black sleeve, blood-red print, the covers as the art
+   PICTURE the new four-piece photo full bleed under the logo, covers as the discography wall
+   COLOUR black ground, bone ink, blood red #d11a1f accent, ash greys
+   TYPE Big Shoulders Display 900 + Inter
+   LAYOUT hero full bleed with logo bottom-left; then bands: bio, line-up, singles, video, shows, contact */
+:root{color-scheme:dark;--bg:#0a0a0b;--bg2:#141416;--ink:#ece8e1;--mute:#a19c94;--red:#d11a1f;--line:#2a2a2e}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+h2{font:900 clamp(40px,6vw,72px)/1 "Big Shoulders Display",Impact,sans-serif;letter-spacing:-.01em;margin:0 0 24px;text-transform:uppercase}
+h3{font:800 26px/1.05 "Big Shoulders Display",Impact,sans-serif;margin:0;text-transform:uppercase}
+.band{padding-block:clamp(48px,7vw,104px);padding-inline:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.alt{background:var(--bg2)}
+nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);background:rgba(10,10,11,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav img{height:22px;width:auto}
+nav .links{display:flex;gap:4px 20px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+nav .links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--mute);padding:6px 0}
+nav .links a:hover{color:var(--ink)}
+.hero{position:relative;min-height:min(92svh,860px);display:grid;align-items:end;overflow:hidden;background:#000}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 40%,rgba(10,10,11,.92) 88%,var(--bg))}
+.hero .in{position:relative;z-index:1;padding:0 max(5vw,16px) clamp(32px,5vw,64px);max-width:1340px;width:100%;margin:0 auto}
+.hero .logo{width:min(500px,86vw);height:auto;margin-bottom:18px}
+.hero p{margin:0 0 22px;font-size:clamp(17px,2vw,20px);max-width:36em;color:#d8d3cb}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:background .2s,color .2s}
+.btn.red{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:focus-visible,nav a:focus-visible,.single a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.bio{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.bio .txt p{margin:0 0 16px;max-width:62ch;color:#d2cdc5}
+.bio .txt p:first-child{font-size:clamp(19px,2.2vw,23px);line-height:1.45;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:2px solid var(--red)}
+.facts div{padding:18px 0;border-bottom:1px solid var(--line)}
+.facts div:nth-child(odd){padding-right:16px}
+.facts b{display:block;font:900 clamp(34px,4vw,48px)/1 "Big Shoulders Display",sans-serif;color:var(--ink)}
+.facts span{color:var(--mute);font-size:14px}
+.skull{margin-top:28px;aspect-ratio:3/2;width:100%;object-fit:cover}
+.crew{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.crew figure{margin:0}
+.crew img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .3s}
+.crew figure:hover img{filter:none}
+.crew figcaption{padding:14px 0 0;border-top:3px solid var(--red);margin-top:12px}
+.crew figcaption span{color:var(--mute);font-size:15px}
+.new{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:2px 8px;margin-left:8px;vertical-align:3px}
+.disco{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.single a{text-decoration:none;display:block}
+.single img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform .3s}
+.single a:hover img{transform:scale(1.02)}
+.single .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px}
+.single .yr{color:var(--mute);white-space:nowrap}
+.single p{margin:6px 0 0;color:#cfcac2;font-size:15px}
+.more{margin-top:40px;border-top:1px solid var(--line)}
+.more li{border-bottom:1px solid var(--line)}
+.more li a{display:grid;grid-template-columns:minmax(0,1fr) auto 40px;gap:16px;padding:16px 0;align-items:center;text-decoration:none}
+.more li a:hover .t{color:var(--red)}
+.more li a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.more .pl{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center}
+.more .pl::before{content:"";border-left:11px solid var(--ink);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.more li a:hover .pl{background:var(--red);border-color:var(--red)}
+.more ul{list-style:none;margin:0;padding:0}
+.more .t{font:800 24px/1.1 "Big Shoulders Display",sans-serif;text-transform:uppercase}
+.more .d{display:block;font:400 15px/1.5 Inter,sans-serif;text-transform:none;color:var(--mute);margin-top:4px}
+.more .yr{color:var(--mute);white-space:nowrap}
+.listen{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.vid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.vid a.frame{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#000}
+.vid a.frame img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .3s}
+.vid a.frame:hover img{opacity:1}
+.play{position:absolute;inset:0;display:grid;place-items:center}
+.play i{width:84px;height:84px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.play i::before{content:"";border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent;margin-left:6px}
+.vid p{color:#d2cdc5;margin:0 0 20px}
+.shows li{display:grid;grid-template-columns:7.5em minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.shows ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--red)}
+.shows .dt{font:900 30px/1 "Big Shoulders Display",sans-serif;white-space:nowrap}
+.shows .pl{font-weight:600}
+.shows .pl span{display:block;font-weight:400;color:var(--mute);font-size:15px}
+.shows .st{color:var(--mute);white-space:nowrap;font-size:15px}
+.shows .note{margin:20px 0 0;color:#d2cdc5}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:end}
+.contact p{color:#d2cdc5;max-width:48ch;margin:0}
+.soc{display:grid;gap:0;border-top:2px solid var(--red)}
+.soc a{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;text-decoration:none;border-bottom:1px solid var(--line);font:800 26px/1 "Big Shoulders Display",sans-serif;text-transform:uppercase}
+.soc a span{font:400 15px Inter,sans-serif;color:var(--mute);text-transform:none}
+.soc a:hover{color:var(--red)}
+footer{padding:28px max(5vw,16px);border-top:1px solid var(--line);color:var(--mute);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+footer img{height:18px;width:auto;opacity:.7}
+.gal{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-color:var(--red) var(--bg2)}
+.gal figure{margin:0;flex:none;scroll-snap-align:start;height:clamp(260px,46vw,520px)}
+.gal img{height:100%;width:auto;max-width:none;object-fit:cover}
+.galhead{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.arrows{display:flex;gap:8px;margin-bottom:24px}
+.arrows button{width:48px;height:48px;background:none;color:var(--ink);border:2px solid var(--ink);font-size:22px;cursor:pointer}
+.arrows button:hover{background:var(--red);border-color:var(--red)}
+.arrows button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.credit{color:var(--mute);font-size:14px;margin:12px 0 0}
+@media(min-width:901px){.hero{min-height:0;aspect-ratio:3/2;max-height:960px}.hero>img{object-position:50% 40%}}
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.vc{text-decoration:none;display:block}
+.vc .th{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#000;margin-bottom:14px}
+.vc .th img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .3s}
+.vc:hover .th img{opacity:1}
+.vc .play i{width:64px;height:64px}
+.vc .sub{color:var(--mute);font-size:15px}
+.vc:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.9);display:none;place-items:center;padding:16px}
+.modal.on{display:grid}
+.modal .box{width:min(1100px,100%);aspect-ratio:16/9;background:#000;position:relative}
+.modal iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.modal .x{position:absolute;top:12px;right:12px;width:48px;height:48px;background:var(--red);color:#fff;border:0;font-size:26px;cursor:pointer}
+@media(max-width:900px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}.disco{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.single p{display:none}}
+@media(max-width:720px){.bio,.vid,.contact{grid-template-columns:minmax(0,1fr)}nav .links{display:none}}
+@media(max-width:720px){.vids{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.disco{grid-template-columns:minmax(0,1fr)}.single p{display:block}.shows li{grid-template-columns:minmax(0,1fr) auto}.shows .pl{grid-column:1/-1;order:3}.hero{min-height:78svh}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Principal">
+  <a href="#inicio" aria-label="Mandrilia, inicio"><img src="img/logo.png" alt="Mandrilia"></a>
+  <div class="links">
+    <a href="#banda">Banda</a>
+    <a href="#formacion">Formación</a>
+    <a href="#musica">Música</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#video">Video</a>
+    <a href="#shows">Shows</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <img src="img/hero.jpg" alt="Mandrilia en el centro de Santiago: Daniel Peralta, Paul Marchant, Rodrigo Vicens y Jaime Prat">
+  <div class="in">
+    <img class="logo" src="img/logo.png" alt="Mandrilia">
+    <p>Heavy, thrash y rock progresivo desde Santiago de Chile. Nuevo single: <strong>Niño de Cristal</strong>.</p>
+    <div class="btns">
+      <a class="btn red" href="#musica">Escuchar ahora</a>
+      <a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial">Ver en YouTube</a>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="banda">
+  <div class="wrap bio">
+    <div class="txt">
+      <h2>La banda</h2>
+      <p>Mandrilia es un cuarteto santiaguino que mezcla la crudeza del metal y el heavy con la ambición del rock progresivo, y que escribe sobre el país en que vive.</p>
+      <p>Desde 2020 la banda trabaja en el material de su primer disco, <em>Tierra de Primates</em>, que desarrolla junto al productor Felipe Ferrada en el estudio AudioCustom.</p>
+      <p>El debut llegó en 2023 con <em>Hombre Hostil</em>, un retrato de los guerreros de la primera línea del estallido social, olvidados con el tiempo. Desde entonces cada single ha sumado una pieza a una propuesta conceptual de letras directas y crítica social, de <em>País en Venta</em> a <em>Niño de Cristal</em>, su himno contra la adicción digital.</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div><b>2020</b><span>Inicio del proyecto</span></div>
+        <div><b>7</b><span>Singles publicados</span></div>
+        <div><b>4</b><span>Integrantes</span></div>
+        <div><b>STGO</b><span>Santiago, Chile</span></div>
+      </div>
+      <img class="skull" src="img/g-contrapicado.jpg" alt="Mandrilia en contrapicado frente a un edificio del centro" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="formacion">
+  <div class="wrap">
+    <h2>Formación</h2>
+    <div class="crew">
+      <figure><img src="img/rodrigo.jpg" alt="Rodrigo Vicens" loading="lazy"><figcaption><h3>Rodrigo Vicens</h3><span>Voz</span></figcaption></figure>
+      <figure><img src="img/jaime.jpg" alt="Jaime Prat" loading="lazy"><figcaption><h3>Jaime Prat</h3><span>Guitarra</span></figcaption></figure>
+      <figure><img src="img/paul.jpg" alt="Paul Marchant" loading="lazy"><figcaption><h3>Paul Marchant <span class="new">Nuevo</span></h3><span>Bajo</span></figcaption></figure>
+      <figure><img src="img/daniel.jpg" alt="Daniel Peralta" loading="lazy"><figcaption><h3>Daniel Peralta</h3><span>Batería</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="musica">
+  <div class="wrap">
+    <h2>Música</h2>
+    <div class="disco">
+      <article class="single">
+        <a href="https://www.youtube.com/watch?v=N1M1hfX1WI8" data-yt="N1M1hfX1WI8"><img src="img/nino.jpg" alt="Portada de Niño de Cristal" >
+        <div class="meta"><h3>Niño de Cristal</h3><span class="yr">Último single</span></div></a>
+        <p>Un himno contra la adicción digital. Séptimo sencillo de la banda.</p>
+      </article>
+      <article class="single">
+        <a href="https://www.youtube.com/watch?v=qYrPb9cEb44" data-yt="qYrPb9cEb44"><img src="img/golpea.jpg" alt="Portada de Golpea Tres Veces" >
+        <div class="meta"><h3>Golpea Tres Veces</h3><span class="yr">Single</span></div></a>
+      </article>
+      <article class="single">
+        <a href="https://www.youtube.com/watch?v=OSofZ6OdbQI" data-yt="OSofZ6OdbQI"><img src="img/separar.jpg" alt="Portada de Separar el Alma" >
+        <div class="meta"><h3>Separar el Alma</h3><span class="yr">2024</span></div></a>
+        <p>Publicado el 30 de octubre de 2024.</p>
+      </article>
+    </div>
+    <div class="more">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=apxnO0uIsik" data-yt="apxnO0uIsik"><span class="t">Genio Entre Ignorantes<span class="d">También en versión radio edit</span></span><span class="yr">2024</span><span class="pl" aria-hidden="true"></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=ZRuPNJl7T0U" data-yt="ZRuPNJl7T0U"><span class="t">País en Venta</span><span class="yr">2024</span><span class="pl" aria-hidden="true"></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=6IVAK5qKVEw" data-yt="6IVAK5qKVEw"><span class="t">Tierra de Primates<span class="d">Adelanto del disco debut del mismo nombre</span></span><span class="yr">2023</span><span class="pl" aria-hidden="true"></span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="t">Hombre Hostil<span class="d">Single debut, sobre la primera línea del estallido social</span></span><span class="yr">2023</span><span class="pl" aria-hidden="true"></span></a></li>
+      </ul>
+    </div>
+    <div class="listen">
+      <a class="btn red" href="https://open.spotify.com/search/Mandrilia">Spotify</a>
+      <a class="btn" href="https://music.apple.com/mx/album/separar-el-alma-single/1774538214">Apple Music</a>
+      <a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial">YouTube</a>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="fotos">
+  <div class="wrap">
+    <div class="galhead"><h2>Fotos</h2><div class="arrows"><button id="prev" aria-label="Foto anterior">&#8592;</button><button id="next" aria-label="Foto siguiente">&#8594;</button></div></div>
+    <div class="gal" id="gal" tabindex="0" aria-label="Galería de fotos oficiales">
+      <figure><img src="img/g-puerta.jpg" alt="Mandrilia: frente a la puerta de una iglesia" loading="lazy"></figure>
+      <figure><img src="img/g-corriendo.jpg" alt="Mandrilia: corriendo por un paso bajo nivel" loading="lazy"></figure>
+      <figure><img src="img/g-ny.jpg" alt="Mandrilia: en una calle de adoquines" loading="lazy"></figure>
+      <figure><img src="img/g-38.jpg" alt="Mandrilia: frente a un portón de madera" loading="lazy"></figure>
+      <figure><img src="img/g-puente.jpg" alt="Mandrilia: bajo una pasarela" loading="lazy"></figure>
+      <figure><img src="img/g-paris.jpg" alt="Mandrilia: calle peatonal del centro" loading="lazy"></figure>
+      <figure><img src="img/g-porton.jpg" alt="Mandrilia: frente a una reja de fierro" loading="lazy"></figure>
+      <figure><img src="img/g-corriendo2.jpg" alt="Mandrilia: en plena carrera" loading="lazy"></figure>
+      <figure><img src="img/g-contrapicado.jpg" alt="Mandrilia: contrapicado" loading="lazy"></figure>
+    </div>
+    <p class="credit">Sesión oficial en el centro de Santiago.</p>
+  </div>
+</section>
+
+<section class="band" id="video">
+  <div class="wrap">
+    <div class="galhead"><h2>Video</h2><a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial" style="margin-bottom:24px">Canal de YouTube</a></div>
+    <div class="vids">
+      <a class="vc" href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="th"><img src="img/g-corriendo2.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Hombre Hostil</h3><span class="sub">Videoclip oficial · 2023</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=9t-gXfF915o" data-yt="9t-gXfF915o"><span class="th"><img src="img/separar.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Videoclip oficial · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=vCwl-le_jKs" data-yt="vCwl-le_jKs"><span class="th"><img src="img/golpea.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Golpea Tres Veces</h3><span class="sub">Making of</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="shows">
+  <div class="wrap shows">
+    <h2>Shows</h2>
+    <ul>
+      <li><span class="dt">12 jun</span><span class="pl">Bar Good Luck, Lira 401, Santiago<span>Metal en vivo, entrada liberada. Con Soulnpain.</span></span><span class="st">2026 · Realizado</span></li>
+    </ul>
+    <p class="note">Próximas fechas muy pronto. Para tocar en tu local o festival, escríbenos.</p>
+  </div>
+</section>
+
+<section class="band" id="contacto">
+  <div class="wrap contact">
+    <div>
+      <h2>Contacto</h2>
+      <p>Prensa, booking y colaboraciones: escríbenos por mensaje directo en Instagram o Facebook.</p>
+    </div>
+    <div class="soc">
+      <a href="https://www.instagram.com/mandrilia.banda/">Instagram <span>@mandrilia.banda</span></a>
+      <a href="https://www.facebook.com/mandrilia.banda">Facebook <span>@mandrilia.banda</span></a>
+      <a href="https://www.youtube.com/@Mandrilia_Oficial">YouTube <span>@Mandrilia_Oficial</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.png" alt="Mandrilia">
+  <span>© 2026 Mandrilia · Santiago de Chile</span>
+</footer>
+
+<script>
+{
+const g=document.getElementById('gal');
+const step=d=>g.scrollBy({left:d*g.clientWidth*0.8,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+document.getElementById('prev').addEventListener('click',()=>step(-1));
+document.getElementById('next').addEventListener('click',()=>step(1));
+g.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();step(1)}if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}});
+}
+</script>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video"><button class="x" id="close" aria-label="Cerrar">×</button><div class="box" id="box"></div></div>
+<script>
+{
+const m=document.getElementById('modal'),box=document.getElementById('box');
+const close=()=>{m.classList.remove('on');box.innerHTML='';document.body.style.overflow=''};
+document.querySelectorAll('[data-yt]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  box.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0" title="Video de Mandrilia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  m.classList.add('on');document.body.style.overflow='hidden';document.getElementById('close').focus();
+}));
+document.getElementById('close').addEventListener('click',close);
+m.addEventListener('click',e=>{if(e.target===m)close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('on'))close()});
+}
+</script>
+</body>
+</html>
