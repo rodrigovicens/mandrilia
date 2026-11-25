@@ -121,7 +121,7 @@ footer img{height:18px;width:auto;opacity:.7}
 .vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .vc{text-decoration:none;display:block}
 .vc .th{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#000;margin-bottom:14px}
-.vc .th img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .3s}
+.vc .th img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .3s}
 .vc:hover .th img{opacity:1}
 .vc .play i{width:64px;height:64px}
 .vc .sub{color:var(--mute);font-size:15px}
@@ -146,8 +146,8 @@ footer img{height:18px;width:auto;opacity:.7}
     <a href="#banda">Banda</a>
     <a href="#formacion">Formación</a>
     <a href="#musica">Música</a>
-    <a href="#fotos">Fotos</a>
     <a href="#video">Video</a>
+    <a href="#fotos">Fotos</a>
     <a href="#shows">Shows</a>
     <a href="#contacto">Contacto</a>
   </div>
@@ -191,7 +191,7 @@ footer img{height:18px;width:auto;opacity:.7}
     <div class="crew">
       <figure><img src="img/rodrigo.jpg" alt="Rodrigo Vicens" loading="lazy"><figcaption><h3>Rodrigo Vicens</h3><span>Voz</span></figcaption></figure>
       <figure><img src="img/jaime.jpg" alt="Jaime Prat" loading="lazy"><figcaption><h3>Jaime Prat</h3><span>Guitarra</span></figcaption></figure>
-      <figure><img src="img/paul.jpg" alt="Paul Marchant" loading="lazy"><figcaption><h3>Paul Marchant <span class="new">Nuevo</span></h3><span>Bajo</span></figcaption></figure>
+      <figure><img src="img/paul.jpg" alt="Paul Marchant" loading="lazy"><figcaption><h3>Paul Marchant</h3><span>Bajo</span></figcaption></figure>
       <figure><img src="img/daniel.jpg" alt="Daniel Peralta" loading="lazy"><figcaption><h3>Daniel Peralta</h3><span>Batería</span></figcaption></figure>
     </div>
   </div>
@@ -232,7 +232,18 @@ footer img{height:18px;width:auto;opacity:.7}
   </div>
 </section>
 
-<section class="band alt" id="fotos">
+<section class="band alt" id="video">
+  <div class="wrap">
+    <div class="galhead"><h2>Video</h2><a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial" style="margin-bottom:24px">Canal de YouTube</a></div>
+    <div class="vids">
+      <a class="vc" href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="th"><img src="https://i.ytimg.com/vi/QRubkb1H3Ow/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/QRubkb1H3Ow/hqdefault.jpg'"><span class="play"><i></i></span></span><h3>Hombre Hostil</h3><span class="sub">Videoclip oficial · 2023</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=9t-gXfF915o" data-yt="9t-gXfF915o"><span class="th"><img src="https://i.ytimg.com/vi/9t-gXfF915o/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/9t-gXfF915o/hqdefault.jpg'"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Videoclip oficial · 2024</span></a>
+      <a class="vc" href="https://www.youtube.com/watch?v=vCwl-le_jKs" data-yt="vCwl-le_jKs"><span class="th"><img src="https://i.ytimg.com/vi/vCwl-le_jKs/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/vCwl-le_jKs/hqdefault.jpg'"><span class="play"><i></i></span></span><h3>Golpea Tres Veces</h3><span class="sub">Making of</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="fotos">
   <div class="wrap">
     <div class="galhead"><h2>Fotos</h2><div class="arrows"><button id="prev" aria-label="Foto anterior">&#8592;</button><button id="next" aria-label="Foto siguiente">&#8594;</button></div></div>
     <div class="gal" id="gal" tabindex="0" aria-label="Galería de fotos oficiales">
@@ -250,17 +261,6 @@ footer img{height:18px;width:auto;opacity:.7}
   </div>
 </section>
 
-<section class="band" id="video">
-  <div class="wrap">
-    <div class="galhead"><h2>Video</h2><a class="btn" href="https://www.youtube.com/@Mandrilia_Oficial" style="margin-bottom:24px">Canal de YouTube</a></div>
-    <div class="vids">
-      <a class="vc" href="https://www.youtube.com/watch?v=QRubkb1H3Ow" data-yt="QRubkb1H3Ow"><span class="th"><img src="img/g-corriendo2.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Hombre Hostil</h3><span class="sub">Videoclip oficial · 2023</span></a>
-      <a class="vc" href="https://www.youtube.com/watch?v=9t-gXfF915o" data-yt="9t-gXfF915o"><span class="th"><img src="img/separar.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Separar el Alma</h3><span class="sub">Videoclip oficial · 2024</span></a>
-      <a class="vc" href="https://www.youtube.com/watch?v=vCwl-le_jKs" data-yt="vCwl-le_jKs"><span class="th"><img src="img/golpea.jpg" alt="" loading="lazy"><span class="play"><i></i></span></span><h3>Golpea Tres Veces</h3><span class="sub">Making of</span></a>
-    </div>
-  </div>
-</section>
-
 <section class="band alt" id="shows">
   <div class="wrap shows">
     <h2>Shows</h2>
@@ -275,12 +275,14 @@ footer img{height:18px;width:auto;opacity:.7}
   <div class="wrap contact">
     <div>
       <h2>Contacto</h2>
-      <p>Prensa, booking y colaboraciones: escríbenos por mensaje directo en Instagram o Facebook.</p>
+      <p>Prensa, booking y colaboraciones: escríbenos por mensaje directo en Instagram. Es la forma más rápida de llegar a la banda.</p>
+      <div class="btns" style="margin-top:24px"><a class="btn red" href="https://ig.me/m/mandrilia.banda">Escribir por Instagram</a></div>
     </div>
     <div class="soc">
       <a href="https://www.instagram.com/mandrilia.banda/">Instagram <span>@mandrilia.banda</span></a>
-      <a href="https://www.facebook.com/mandrilia.banda">Facebook <span>@mandrilia.banda</span></a>
+      <a href="https://www.tiktok.com/@mandrilia">TikTok <span>@mandrilia</span></a>
       <a href="https://www.youtube.com/@Mandrilia_Oficial">YouTube <span>@Mandrilia_Oficial</span></a>
+      <a href="https://www.facebook.com/mandrilia.banda">Facebook <span>@mandrilia.banda</span></a>
     </div>
   </div>
 </section>
